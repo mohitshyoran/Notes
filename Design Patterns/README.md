@@ -4,12 +4,12 @@ Design patterns are predefined solutions to commonly occurring problems in softw
 
 ## Table of contents
 
-* [Types of Design Patterns][#types]
-* [Singleton Pattern][#singleton]
+* [Types of Design Patterns](#types)
+* [Singleton Pattern](#singleton)
 
 
 
-## Types of Design Patterns]
+## Types of Design Patterns
 
 **There are three types of Design Patterns.**
 
