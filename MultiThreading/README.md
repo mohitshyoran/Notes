@@ -93,14 +93,34 @@ No!, It will run once, second time it will throw IllegalThreadStateException.
 Direct run method will run and it will be treated as normal object not as a thread.
 
 
-## Deamon Threads
+### Deamon Threads
 1. It is a service provider threads that provides services to user threads.
 eg: gc, finalizer etc.
 2. When all user thread dies, JVM terminates this thread automatically.
 3. Two Methods - setDeamon(boolean status), isDeamon()
 
 ## Java Thread Pool
+1. Repesemt a group of worker thread that are waiting for the job and reused many times.
+2. or Take a thread, use it and put again in group.
+***Advantage:*** Saves time because of no need to create new thread.
 
+## Thread Group
+1. Multiple threads are grouped in single object.
+2. In such way, we can suspend(), resume() group og threads by a signle method calls.
+
+### java grbage collection
+1. Garbage means unrefrenced data.
+2. It is way to destroy unused objects and free memory.
+3. In java it is performed automatically.
+4. Garbage collector of JVM collects only those object that are created by new keyword.
+-> All other destroyed(cleanup processing) by ***finalize()***.
+***Advantage:*** - Memory efficient and Automatic.
+
+**Q. How can a object be unreferenced?**
+1. By nulling refrence.
+2. By assigning a refrence to another.
+3. By anonymus object.
+   
 
 
 
