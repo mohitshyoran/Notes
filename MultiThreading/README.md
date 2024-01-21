@@ -199,6 +199,63 @@ class Table
 } 
 ```
 
+# Multithreading coding questions.
+
+**Q1. Write a java code with three threads, which will alternatively write number from 1 to 15.
+Like first thread 1, then second 2, then third 3 and then again first thread 4.**
+```java
+class SharedResource {
+    private int count = 1;
+    private final int maxCount = 15;
+
+    public synchronized void printNumber(int expectedThreadNumber) {
+        while (count <= maxCount) {
+            int actualThreadNumber = (count - 1) % 3;
+            if (actualThreadNumber == expectedThreadNumber) {
+                System.out.println("Thread " + (expectedThreadNumber + 1) + ": " + count++);
+                notifyAll();
+            } else {
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+    }
+}
+
+class NumberPrinter extends Thread {
+    private final SharedResource sharedResource;
+    private final int threadNumber;
+
+    public NumberPrinter(SharedResource sharedResource, int threadNumber) {
+        this.sharedResource = sharedResource;
+        this.threadNumber = threadNumber;
+    }
+
+    @Override
+    public void run() {
+        sharedResource.printNumber(threadNumber);
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+        SharedResource sharedResource = new SharedResource();
+
+        NumberPrinter thread1 = new NumberPrinter(sharedResource, 0);
+        NumberPrinter thread2 = new NumberPrinter(sharedResource, 1);
+        NumberPrinter thread3 = new NumberPrinter(sharedResource, 2);
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+    }
+}
+```
+
+
 
 
 
