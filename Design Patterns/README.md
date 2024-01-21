@@ -7,6 +7,7 @@ Design patterns are predefined solutions to commonly occurring problems in softw
 * [Types of Design Patterns](#types-of-design-patterns)
 * [Singleton Pattern](#singleton-pattern)
 * [Prototype Pattern](#prototype-pattern)
+* [Factory Pattern](#factory-pattern)
 
 
 
@@ -50,21 +51,55 @@ class Singleton {
 ## Prototype Pattern
 Clone an existing object instead of creating new one, when object creation is time consuming, and costly.\
 Then properties can be changed according to need.\
-***use case:*** DB connection, Logging.
+***use case:*** could be used to create multiple instances of the same object with unique attribute values such as color or size.
+
+
+## Factory Pattern
+Provides an interface for creating objects in a superclass.
+Object is created withour exposing creation logic and refers to newly created object using a common interface.
+***use case:*** Swiggy Order - dine in, takeout, delievery order. Uber rides - solo, shared, luxury rides.
 
 ```java
-class Singleton {
-    private static Singleton obj;
- 
-    // private constructor to force use of
-    // getInstance() to create Singleton object
-    private Singleton() {}
- 
-    public static Singleton getInstance()
+public interface Notification {
+    void notifyUser();
+}
+
+public class SMSNotification implements Notification {
+    @Override
+    public void notifyUser()
     {
-        if (obj == null)
-            obj = new Singleton();
-        return obj;
+        System.out.println("Sending an SMS notification");
+    }
+}
+
+public class EmailNotification implements Notification {
+    @Override
+    public void notifyUser()
+    {
+        System.out.println("Sending an e-mail notification");
+    }
+}
+
+public class NotificationFactory {
+    public Notification createNotification(String channel)
+    {
+        switch (channel) {
+        case "SMS":
+            return new SMSNotification();
+        case "EMAIL":
+            return new EmailNotification();
+        default:
+            throw new IllegalArgumentException("Unknown channel "+channel);
+        }
+    }
+}
+
+public class NotificationService {
+    public static void main(String[] args)
+    {
+        NotificationFactory notificationFactory = new NotificationFactory();
+        Notification notification = notificationFactory.createNotification("SMS");
+        notification.notifyUser();
     }
 }
 ```
