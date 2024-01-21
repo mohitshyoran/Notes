@@ -8,6 +8,7 @@ Design patterns are predefined solutions to commonly occurring problems in softw
 * [Singleton Pattern](#singleton-pattern)
 * [Prototype Pattern](#prototype-pattern)
 * [Factory Pattern](#factory-pattern)
+* [Builder Pattern](#builder-pattern)
 
 
 
@@ -103,5 +104,11 @@ public class NotificationService {
     }
 }
 ```
+
+## Builder Pattern
+Construct a complex object from simple objects using step-by-step approach.\
+***use case:*** --.
+
+
 
 
