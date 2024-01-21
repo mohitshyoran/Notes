@@ -132,7 +132,27 @@ eg: gc, finalizer etc.
    ```java
    new employee();
    ```
+
+
+# Java synchronization
+Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+
+**Two types**
+1. Thread synchronization.
+2. Process synchronization.
+
+**Thread synchronization**
+1. Mutual exclusive.
+2. Cooperation (Inter-thread communication in java).
+
+**Mutual exclusive**
+1. Synchronized method.
+2. Synchronized block.
+3. Static synchronization.
+
+**1. Synchronized method**
    
+
 
 
 
