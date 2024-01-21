@@ -56,8 +56,8 @@ Then properties can be changed according to need.\
 
 
 ## Factory Pattern
-Provides an interface for creating objects in a superclass.
-Object is created withour exposing creation logic and refers to newly created object using a common interface.\
+Provides an interface for creating objects in a superclass.\
+Object is created without exposing creation logic and refers to newly created object using a common interface.\
 ***use case:*** Swiggy Order - dine in, takeout, delievery order. Uber rides - solo, shared, luxury rides.
 
 ```java
