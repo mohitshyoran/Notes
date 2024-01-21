@@ -135,7 +135,8 @@ eg: gc, finalizer etc.
 
 
 # Java synchronization
-Synchronization in Java is the capability to control the access of multiple threads to any shared resource.
+Synchronization in Java is the capability to control the access of multiple threads to any shared resource.\
+Provides lock to threads.
 
 **Two types**
 1. Thread synchronization.
@@ -151,6 +152,58 @@ Synchronization in Java is the capability to control the access of multiple thre
 3. Static synchronization.
 
 **1. Synchronized method**
+Synchronized method is used to lock an object for any shared resource.\
+When a thread invokes a synchronized method, it automatically acquires the lock for that object and releases it when the thread completes its task.
+
+```java
+class Line 
+{ 
+    synchronized public void getLine() 
+    { 
+        for (int i = 0; i < 3; i++) 
+        { 
+            System.out.println(i); 
+        } 
+    } 
+}
+```
+**2. Synchronized block**
+Prevent multiple threads from executing a portion of a code in a method at the same time.
+```java
+public class Geek 
+{
+    public int count = 0; 
+    public void geekName() 
+    {
+        // Only one thread is permitted to enter at a time. 
+        synchronized(this) 
+        { 
+            count++;
+        }  
+    } 
+}
+```
+
+**3. Static Synchronization**
+The lock will be on the class not on object.\
+Static is property of class not object so it will work on class level.
+
+```java
+class Table  
+{     
+ synchronized static void printTable(int n){    
+   for(int i=1;i<=10;i++){    
+     System.out.println(n*i);    
+   }    
+ }    
+} 
+```
+
+
+
+
+
+
    
 
 
