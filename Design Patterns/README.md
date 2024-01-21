@@ -9,7 +9,7 @@ Design patterns are predefined solutions to commonly occurring problems in softw
 
 
 
-## Types of Design Patterns
+## Types
 
 **There are three types of Design Patterns.**
 
@@ -24,7 +24,7 @@ eg:Command pattern, Iterator pattern, Observer pattern, Strategy pattern, etc.
 
 
 
-## Singleton Pattern
+## Singleton
 Singleton design pattern restricts the instantiation of a class to a single instance.\
 ***use case:*** DB connection, Logging.
 
