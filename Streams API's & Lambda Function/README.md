@@ -1,6 +1,17 @@
 # Stream API's practice questions
 Source - https://www.w3resource.com/java-exercises/stream/index.php
 
+**What is difference in stream and collection?**
+1. Collection is memory data structure - every element computed before adding to collection, Stream is fixed data structure - computes on demand.
+2. Stream lets you process items one by one, while a Collection is like a basket that holds a bunch of items together.
+3. Streams are good for functional-style processing, and Collections are good for storing and managing groups of things.
+
+**There are two type of operation in Stream**\\
+***1. Intermediate*** : return a stream as a result.\\
+eg: map(), filter(), distinct(), sorted(), limit(), skip() etc\\
+***1. Terminal*** : return non-stream values like primitive or object or collection or may not return anything.\\
+eg: forEach(), toArray(), reduce(), collect(), min(), max(), count(), anyMatch(), allMatch(), noneMatch(), findFirst(), findAny() etc\\
+
 ### Q1. Write a Java program to calculate the average of a list of integers using streams.
 ```java
 import java.util.*;
@@ -145,4 +156,150 @@ public class MyClass {
 }
 ```
 
+### Q9. How to find duplicate elements in a given integers list in java using Stream functions?
+```java
+import java.util.*;
+import java.util.stream.*;
+
+public class DuplicateElements {
+  public static void main(String args[]) {
+          List<Integer> myList = Arrays.asList(10,15,8,49,25,98,98,32,15);
+          Set<Integer> set = new HashSet();
+          myList.stream()
+                .filter(n -> !set.add(n))
+                .forEach(System.out::println);
+  }
+}
+```
+
+### Q10. Given a list of integers, separate odd and even numbers?
+```java
+import java.util.*;
+import java.util.Map.*;
+import java.util.stream.*;
+ 
+public class Java8Code {
+    public static void main(String[] args) {
+        List<Integer> listOfIntegers = Arrays.asList(71, 18, 42, 21, 67, 32, 95, 14, 56, 87);
+         
+        Map<Boolean, List<Integer>> oddEvenNumbersMap = 
+                listOfIntegers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0));
+        
+        System.out.println(oddEvenNumbersMap);
+    }
+}
+
+// Output : {false=[71, 21, 67, 95, 87], true=[18, 42, 32, 14, 56]}
+```
+
+### Q10. How do you find frequency of each character in a string using Java 8 streams?
+```java
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+ 
+public class Java8Code 
+{
+    public static void main(String[] args) 
+    {
+        String inputString = "Java Concept Of The Day";
+         
+        Map<Character, Long> charCountMap = inputString.chars()
+                                                .mapToObj(c -> (char)c)
+                                                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        // Function.identity() - always returns its input argument.                                        
+         
+        System.out.println(charCountMap);
+    }
+}
+
+// Output : { =4, a=3, c=1, C=1, D=1, e=2, f=1, h=1, J=1, n=1, O=1, o=1, p=1, T=1, t=1, v=1, y=1}
+```
+
+### Q11. Given a list of strings, join the strings with ‘[‘ as prefix, ‘]’ as suffix and ‘,’ as delimiter?
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+ 
+public class Java8Code 
+{
+    public static void main(String[] args) 
+    {
+        List<String> listOfStrings = Arrays.asList("Facebook", "Twitter", "YouTube", "WhatsApp", "LinkedIn");
+         
+        String joinedString = listOfStrings.stream()
+                                            .collect(Collectors.joining(",", "[", "]"));
+         
+        System.out.println(joinedString);
+    }
+}
+
+// Output : [Facebook,Twitter,YouTube,WhatsApp,LinkedIn]
+```
+
+### Q12. How do you get three minimum numbers from the given list of integers??
+```java
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+ 
+public class Java8Code {
+    public static void main(String[] args) {
+        List<Integer> listOfIntegers = Arrays.asList(45, 12, 56, 15, 24, 75, 31, 89);
+         
+        listOfIntegers.stream().sorted().limit(3).forEach(System.out::println);
+    }
+}
+```
+
+### Q13. Given a list of strings, sort them according to increasing order of their length?
+```java
+import java.util.Arrays;
+import java.util.List;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+ 
+public class Java8Code {
+    public static void main(String[] args) {
+        List<String> listOfStrings = Arrays.asList("Java", "Python", "C#", "HTML", "Kotlin", "C++", "COBOL", "C");
+         
+       listOfStrings.stream()
+                    .sorted(Comparator.comparing(String::length))
+                    .forEach(System.out::println);
+    }
+}
+```
+
+### Q14. How do you find common elements between two arrays?
+```java
+import java.util.Arrays;
+import java.util.List;
+ 
+public class Java8Code {
+    public static void main(String[] args) {
+        List<Integer> list1 = Arrays.asList(71, 21, 34, 89, 56, 28); 
+        List<Integer> list2 = Arrays.asList(12, 56, 17, 21, 94, 34);
+         
+        list1.stream().filter(num -> list2.contains(num)).forEach(System.out::println);
+    }
+}
+```
+
+### Q15.  Reverse each word of a string using Java 8 streams??
+```java
+import java.util.Arrays;
+import java.util.stream.Collectors;
+ 
+public class Java8Code {
+    public static void main(String[] args) {
+        String str = "Java Concept Of The Day";
+        String reversedStr = Arrays.stream(str.split(" "))
+                                    .map(word -> new StringBuffer(word).reverse())
+                                    .collect(Collectors.joining(" "));
+         
+        System.out.println(reversedStr);
+    }
+}
+```
 
