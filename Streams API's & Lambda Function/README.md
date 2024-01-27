@@ -377,23 +377,3 @@ public class Main {
     }
 }
 ```
-
-### Q4. Calculate factorial using Lambda expression in Java.
-```java
-import java.util.function.LongUnaryOperator;
-public class Main {
-    public static void main(String[] args) {
-        // Define the factorial lambda expression
-        LongUnaryOperator factorial = n -> {
-            long result = 1;
-            for (long i = 1; i <= n; i++) {
-                result *= i;
-            }
-            return result;
-        };
-
-        System.out.println(factorial.applyAsLong(5));
-    }
-}
-```
-
