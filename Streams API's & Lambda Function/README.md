@@ -304,13 +304,16 @@ public class Java8Code {
 ```
 
 # Lambda Expression Practice Questions
-A lambda in Java essentially consists of three parts: a parenthesized set of parameters, an arrow, and then a body, which can either be a single expression or a block of Java code.
-No argument - () -> System.out.println("Hello")
-one argument - (arg1) -> System.out.println(arg1)
-Single statement - (arg1, arg2) -> arg1+arg2
-Multiple statement - (arg1, arg2) -> {System.out.println(arg1); return arg1+arg2;}
+A lambda in Java essentially consists of three parts: a parenthesized set of parameters, an arrow, and then a body, which can either be a single expression or a block of Java code.\
 
-### Write a Java program to implement a lambda expression to find the sum of two integers.
+No argument - () -> System.out.println("Hello")\
+one argument - (arg1) -> System.out.println(arg1)\
+Single statement - (arg1, arg2) -> arg1+arg2\
+Multiple statement - (arg1, arg2) -> {System.out.println(arg1); return arg1+arg2;}\
+
+source - https://www.w3resource.com/java-exercises/lambda/index.php\
+
+### Q1. Write a Java program to implement a lambda expression to find the sum of two integers.
 ```java
 interface SumCalculator {
     int sum(int a, int b);
@@ -321,6 +324,75 @@ public class MyClass {
         SumCalculator sumCalculator = (x,y) -> x+y;
         int sum = sumCalculator.sum(10, 15);
         System.out.println("Sum of x+y = " + sum);
+    }
+}
+```
+
+### Q2. Write a Java program to implement a lambda expression to convert a list of strings to uppercase.
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> stringList = Arrays.asList("Red", "Green", "Blue", "PINK");
+
+        stringList.replaceAll(str -> str.toLowerCase());
+        
+        System.out.println(stringList);
+    }
+}
+```
+
+### Q3. Sort strings in alphabetical order using Lambda expression in Java
+```java
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> stringList = Arrays.asList("Red", "Green", "Blue", "PINK");
+        stringList.sort((str1, str2) -> str1.compareToIgnoreCase(str2));
+        
+        System.out.println(stringList);
+    }
+}
+```
+
+### Q4. Calculate factorial using Lambda expression in Java.
+```java
+import java.util.function.LongUnaryOperator;
+public class Main {
+    public static void main(String[] args) {
+        // Define the factorial lambda expression
+        LongUnaryOperator factorial = n -> {
+            long result = 1;
+            for (long i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        };
+
+        System.out.println(factorial.applyAsLong(5));
+    }
+}
+```
+
+### Q4. Calculate factorial using Lambda expression in Java.
+```java
+import java.util.function.LongUnaryOperator;
+public class Main {
+    public static void main(String[] args) {
+        // Define the factorial lambda expression
+        LongUnaryOperator factorial = n -> {
+            long result = 1;
+            for (long i = 1; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        };
+
+        System.out.println(factorial.applyAsLong(5));
     }
 }
 ```
