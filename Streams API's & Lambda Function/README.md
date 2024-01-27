@@ -303,3 +303,25 @@ public class Java8Code {
 }
 ```
 
+# Lambda Expression Practice Questions
+A lambda in Java essentially consists of three parts: a parenthesized set of parameters, an arrow, and then a body, which can either be a single expression or a block of Java code.
+No argument - () -> System.out.println("Hello")
+one argument - (arg1) -> System.out.println(arg1)
+Single statement - (arg1, arg2) -> arg1+arg2
+Multiple statement - (arg1, arg2) -> {System.out.println(arg1); return arg1+arg2;}
+
+### Write a Java program to implement a lambda expression to find the sum of two integers.
+```java
+interface SumCalculator {
+    int sum(int a, int b);
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+        SumCalculator sumCalculator = (x,y) -> x+y;
+        int sum = sumCalculator.sum(10, 15);
+        System.out.println("Sum of x+y = " + sum);
+    }
+}
+```
+
