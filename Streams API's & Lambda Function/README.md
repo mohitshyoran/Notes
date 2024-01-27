@@ -6,11 +6,11 @@ Source - https://www.w3resource.com/java-exercises/stream/index.php
 2. Stream lets you process items one by one, while a Collection is like a basket that holds a bunch of items together.
 3. Streams are good for functional-style processing, and Collections are good for storing and managing groups of things.
 
-**There are two type of operation in Stream**\\
-***1. Intermediate*** : return a stream as a result.\\
-eg: map(), filter(), distinct(), sorted(), limit(), skip() etc\\
-***1. Terminal*** : return non-stream values like primitive or object or collection or may not return anything.\\
-eg: forEach(), toArray(), reduce(), collect(), min(), max(), count(), anyMatch(), allMatch(), noneMatch(), findFirst(), findAny() etc\\
+**There are two type of operation in Stream**\
+***1. Intermediate*** : return a stream as a result.\
+eg: map(), filter(), distinct(), sorted(), limit(), skip() etc.\
+***1. Terminal*** : return non-stream values like primitive or object or collection or may not return anything.\
+eg: forEach(), toArray(), reduce(), collect(), min(), max(), count(), anyMatch(), allMatch(), noneMatch(), findFirst(), findAny() etc.\
 
 ### Q1. Write a Java program to calculate the average of a list of integers using streams.
 ```java
