@@ -3,12 +3,18 @@
 Design patterns are predefined solutions to commonly occurring problems in software design.
 
 ## Table of contents
-
 * [Types of Design Patterns](#types-of-design-patterns)
+  
+### Creational
 * [Singleton Pattern](#singleton-pattern)
 * [Prototype Pattern](#prototype-pattern)
 * [Factory Pattern](#factory-pattern)
 * [Builder Pattern](#builder-pattern)
+  
+### Structural
+* [Decorator Pattern](#decorator-pattern)
+  
+### Behavioural
 * [Decorator Pattern](#decorator-pattern)
 
 
