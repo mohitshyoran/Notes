@@ -9,6 +9,7 @@ Design patterns are predefined solutions to commonly occurring problems in softw
 * [Prototype Pattern](#prototype-pattern)
 * [Factory Pattern](#factory-pattern)
 * [Builder Pattern](#builder-pattern)
+* [Decorator Pattern](#decorator-pattern)
 
 
 
