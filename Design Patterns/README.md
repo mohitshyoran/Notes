@@ -170,7 +170,7 @@ Shape: Rectangle, Border Color: Red
 
 
 ## Observer Pattern
-A behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to an object. \
+lets you define a subscription mechanism to notify multiple objects about any events that happen to an object. \
 ***use case:*** update change in score to Score Display and Predictor.
 ```java
 class CricketData{
