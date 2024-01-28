@@ -22,7 +22,7 @@ eg: Adaptor design, Facade design, Decorator design, proxy design etc.
 defines how the objects should communicate and interact with one another.\
 eg:Command pattern, Iterator pattern, Observer pattern, Strategy pattern, etc.
 
-* [Decorator Pattern](#decorator-pattern)
+* [Observer Pattern](#observer-pattern)
 
 
 ## Singleton Pattern
@@ -167,5 +167,63 @@ output: Shape: Rectangle
 Shape: Rectangle, Border Color: Red
 ```
 
+
+## Observer Pattern
+It is Structural design pattern which allows a user to add new functionality to an existing object without altering its structure.\
+***use case:*** For add-ons(ex: Burger with extra cheese, with extra Mayonnaise.)
+
+```java
+interface Shape {
+    void draw();
+}
+
+class Rectangle implements Shape {
+ 
+    @Override public void draw(){
+        System.out.print("Shape: Rectangle");
+    }
+}
+
+abstract class ShapeDecorator implements Shape {
+    protected Shape decoratedShape;
+
+    public ShapeDecorator(Shape decoratedShape){
+        this.decoratedShape = decoratedShape;
+    }
+ 
+    public void draw(){ 
+        decoratedShape.draw(); 
+    }
+}
+
+class RedShapeDecorator extends ShapeDecorator {
+    public RedShapeDecorator(Shape decoratedShape){
+        super(decoratedShape);
+    }
+ 
+    @Override public void draw(){
+        decoratedShape.draw();
+        setRedBorder(decoratedShape);
+    }
+ 
+    private void setRedBorder(Shape decoratedShape){
+        System.out.println(", Border Color: Red");
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+        Shape rectangle = new Rectangle();
+        rectangle.draw();
+        System.out.println();
+         
+        rectangle = new RedShapeDecorator(rectangle);
+        rectangle.draw();
+    }
+}
+
+output: Shape: Rectangle
+Shape: Rectangle, Border Color: Red
+```
 
 
