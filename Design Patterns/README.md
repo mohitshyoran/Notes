@@ -111,7 +111,7 @@ Construct a complex object from simple objects using step-by-step approach.\
 
 
 ## Decorator Pattern
-It is Structural design pattern which allows a user to add new functionality to an existing object without altering its structure.\
+It allows a user to add new functionality to an existing object without altering its structure.\
 ***use case:*** For add-ons(ex: Burger with extra cheese, with extra Mayonnaise.)
 
 ```java
