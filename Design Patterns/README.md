@@ -251,7 +251,7 @@ PredictedScore: 245
 
 ## Adapter Pattern
 Adapter pattern works as a bridge between two incompatible interfaces. \
-***use case:*** when interface are not same type
+
 ```java
 interface Bird{
 	// birds implement Bird interface that allows them to fly and make sounds adaptee interface
