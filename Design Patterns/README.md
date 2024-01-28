@@ -17,6 +17,7 @@ Structural design patterns explain how to assemble objects and classes into larg
 eg: Adaptor design, Facade design, Decorator design, proxy design etc.
 
 * [Decorator Pattern](#decorator-pattern)
+* [Adapter Pattern](#adapter-pattern)
   
 **3. Behavioural:**
 defines how the objects should communicate and interact with one another.\
@@ -248,4 +249,72 @@ Run Rate: 4.901961
 PredictedScore: 245
 ```
 
+## Adapter Pattern
+Adapter pattern works as a bridge between two incompatible interfaces. \
+***use case:*** when interface are not same type
+```java
+interface Bird{
+	// birds implement Bird interface that allows them to fly and make sounds adaptee interface
+	public void fly();
+	public void makeSound();
+}
+
+class Sparrow implements Bird{
+	public void fly(){
+		System.out.println("Flying");
+	}
+	public void makeSound(){
+		System.out.println("Chirp Chirp");
+	}
+}
+
+interface ToyDuck{
+	// target interface
+	// toyducks dont fly they just make squeaking sound
+	public void squeak();
+}
+
+class PlasticToyDuck implements ToyDuck{
+	public void squeak(){
+		System.out.println("Squeak");
+	}
+}
+
+class BirdAdapter implements ToyDuck{
+	// You need to implement the interface your client expects to use.
+	Bird bird;
+	public BirdAdapter(Bird bird){
+		// we need reference to the object we are adapting
+		this.bird = bird;
+	}
+
+	public void squeak(){
+		// translate the methods appropriately
+		bird.makeSound();
+	}
+}
+
+class Main
+{
+	public static void main(String args[])
+	{
+		Sparrow sparrow = new Sparrow();
+		ToyDuck toyDuck = new PlasticToyDuck();
+
+		// Wrap a bird in a birdAdapter so that it behaves like toy duck
+		ToyDuck birdAdapter = new BirdAdapter(sparrow);
+
+		System.out.println("Sparrow...");
+		sparrow.fly();
+		sparrow.makeSound();
+
+		System.out.println("ToyDuck...");
+		toyDuck.squeak();
+
+		// toy duck behaving like a bird
+		System.out.println("BirdAdapter...");
+		birdAdapter.squeak();
+	}
+}
+```
 
