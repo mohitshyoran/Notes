@@ -170,60 +170,82 @@ Shape: Rectangle, Border Color: Red
 
 ## Observer Pattern
 A behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to an object. \
-***use case:*** update change status in ride to Driver and Rider.
-
+***use case:*** update change in score to Score Display and Predictor.
 ```java
-interface Shape {
-    void draw();
+class CricketData{
+	int runs, wickets;
+	float overs;
+	CurrentScoreDisplay currentScoreDisplay;
+	AverageScoreDisplay averageScoreDisplay;
+
+	public CricketData(CurrentScoreDisplay currentScoreDisplay, AverageScoreDisplay averageScoreDisplay){
+		this.currentScoreDisplay = currentScoreDisplay;
+		this.averageScoreDisplay = averageScoreDisplay;
+	}
+
+	public void dataChanged(int runs, int wickets, float overs){
+		this.runs = runs;
+		this.wickets = wickets;
+		this.overs = overs;
+
+		currentScoreDisplay.update(runs,wickets,overs);
+		averageScoreDisplay.update(runs,wickets,overs);
+	}
 }
 
-class Rectangle implements Shape {
- 
-    @Override public void draw(){
-        System.out.print("Shape: Rectangle");
-    }
+class AverageScoreDisplay{
+	private float runRate;
+	private int predictedScore;
+
+	public void update(int runs, int wickets, float overs){
+		this.runRate = (float)runs/overs;
+		this.predictedScore = (int) (this.runRate * 50);
+		display();
+	}
+
+	public void display(){
+		System.out.println("\nAverage Score Display:\n" + "Run Rate: " + runRate + "\nPredictedScore: " + predictedScore);
+	}
 }
 
-abstract class ShapeDecorator implements Shape {
-    protected Shape decoratedShape;
+class CurrentScoreDisplay{
+	private int runs, wickets;
+	private float overs;
 
-    public ShapeDecorator(Shape decoratedShape){
-        this.decoratedShape = decoratedShape;
-    }
- 
-    public void draw(){ 
-        decoratedShape.draw(); 
-    }
+	public void update(int runs,int wickets,float overs){
+		this.runs = runs;
+		this.wickets = wickets;
+		this.overs = overs;
+		display();
+	}
+
+	public void display(){
+		System.out.println("\nCurrent Score Display: \n" + "Runs: " + runs +"\nWickets:" + wickets + "\nOvers: " + overs );
+	}
 }
 
-class RedShapeDecorator extends ShapeDecorator {
-    public RedShapeDecorator(Shape decoratedShape){
-        super(decoratedShape);
-    }
- 
-    @Override public void draw(){
-        decoratedShape.draw();
-        setRedBorder(decoratedShape);
-    }
- 
-    private void setRedBorder(Shape decoratedShape){
-        System.out.println(", Border Color: Red");
-    }
+public class Main{
+	public static void main(String args[]){
+	    // Observer
+		AverageScoreDisplay averageScoreDisplay = new AverageScoreDisplay();
+		CurrentScoreDisplay currentScoreDisplay = new CurrentScoreDisplay();
+
+        // Subject
+		CricketData cricketData = new CricketData(currentScoreDisplay, averageScoreDisplay);
+
+		cricketData.dataChanged(50, 5, (float)10.2);
+	}
 }
 
-public class MyClass {
-    public static void main(String args[]) {
-        Shape rectangle = new Rectangle();
-        rectangle.draw();
-        System.out.println();
-         
-        rectangle = new RedShapeDecorator(rectangle);
-        rectangle.draw();
-    }
-}
+output:
+Current Score Display: 
+Runs: 50
+Wickets:5
+Overs: 10.2
 
-output: Shape: Rectangle
-Shape: Rectangle, Border Color: Red
+Average Score Display:
+Run Rate: 4.901961
+PredictedScore: 245
 ```
 
 
