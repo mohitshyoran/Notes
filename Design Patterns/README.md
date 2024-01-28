@@ -1,11 +1,9 @@
 # Design Patterns
 
-Design patterns are predefined solutions to commonly occurring problems in software design.
-
-## Table of contents
+Design patterns are predefined solutions to commonly occurring problems in software design.\
 There are three types of Design Patterns.
   
-**Creational:**
+**1. Creational:**
 Creational design patterns provide various object creation mechanisms.\
 eg: Singleton design, Prototype design, Factory design pattern, Builder design, Abstract Factory etc.
 
@@ -14,13 +12,13 @@ eg: Singleton design, Prototype design, Factory design pattern, Builder design, 
 * [Factory Pattern](#factory-pattern)
 * [Builder Pattern](#builder-pattern)
   
-**Structural:**
+**2. Structural:**
 Structural design patterns explain how to assemble objects and classes into larger structures.\
 eg: Adaptor design, Facade design, Decorator design, proxy design etc.
 
 * [Decorator Pattern](#decorator-pattern)
   
-**Behavioural:**
+**3. Behavioural:**
 defines how the objects should communicate and interact with one another.\
 eg:Command pattern, Iterator pattern, Observer pattern, Strategy pattern, etc.
 
