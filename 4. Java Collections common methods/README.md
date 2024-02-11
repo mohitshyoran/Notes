@@ -65,7 +65,7 @@ list.remove(0);
 - E remove(), E remove(int index), boolean remove(Object o), E removeFirst(), E removeLast()
 - E set(int index, E element)
 
-## 3. 
+## 3. Stack
 
 
 
