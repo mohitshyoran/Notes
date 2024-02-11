@@ -247,11 +247,13 @@ for(Map.Entry m : mp.entrySet()){
 ![](images/image03.png)
 
 ## 2. LinkedHashmap
-- Stores unique key, can have on null key.
-- Initial capacity - 16, Load factor - 0.75
+- Everything same as HashMap, it just maintain insertion order.
 
-***Constructors***
-- HashMap(), HashMap(Map<? extends K,? extends V> m), HashMap(int capacity), HashMap(int capacity, float loadFactor)
+```java
+ LinkedHashMap<Integer,String> hm=new LinkedHashMap<Integer,String>();
+```
+
+## 3. Treemap
 
 
 
