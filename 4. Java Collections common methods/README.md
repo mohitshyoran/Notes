@@ -215,6 +215,33 @@ Deque<String> deque = new ArrayDeque<String>();
 
 ![](images/image02.png)
 
+## 1. HashSet
+- Stores unique key, can have on null key.
+- Initial capacity - 16, Load factor - 0.75
+
+***Constructors***
+- HashMap(), HashMap(Map<? extends K,? extends V> m), HashMap(int capacity), HashMap(int capacity, float loadFactor)
+  
+***Common Used Methods***
+- clear(), isEmpty(), size()
+- entrySet(), keySet(), 
+- put(Object key, Object value), V putIfAbsent(K key, V value)
+- get(Object key), getOrDefault(Object key, V defaultValue)
+- containsKey(Object key), containsValue(Object value)
+- remove(Object key), remove(Object key, Object value)
+- Collection<V> values()
+
+```java
+HashMap<Integer,String> mp=new HashMap<>();
+mp.put(1,"Mango");
+mp.put(2,"Apple");    
+mp.put(3,"Banana");   
+   
+for(Map.Entry m : mp.entrySet()){    
+    System.out.println(m.getKey()+" "+m.getValue());    
+}
+```
+
 
 
   
