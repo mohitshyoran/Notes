@@ -193,9 +193,19 @@ public class Student implements Comparable<Student> {
 ```
 
 ## 8. Array Dequeue
+- Doubly ended queues, insertion and deletion supported on both the end.
+- Linked list is also a Dequeue.
+
+```java
+Deque<String> deque = new ArrayDeque<String>();
+```
  
 ***Common Used Methods***
-- offer(E e), poll(), peek(), size(), remove(E e)
+- add(), offer()
+- peek(), peekFirst(), peekLast()
+- poll(), pollFirst(), pollLast()
+- offer(), offerFirst(), offerLast()
+- remove(), removeFirst(), removeLast()
 
 
 
