@@ -66,6 +66,49 @@ list.remove(0);
 - E set(int index, E element)
 
 ## 3. Stack
+```java
+Stack<type> stk = new Stack<>();
+```
+
+***Common Used Methods***
+- push(E item)
+- pop()
+- peek()
+- empty()
+- size()
+
+  ```java
+  Iterate by forEach
+  public static void main(String args[]) {
+    Stack <Integer> stk = new Stack<>();  
+ 
+    stk.push(119);  
+    stk.push(203);  
+    stk.push(988);  
+
+    stk.forEach(n ->  {  
+        System.out.println(n);}
+    );  
+    }
+
+  Iterate by Iterator
+      Stack <Integer> stk = new Stack<>();  
+   
+      stk.push(119);  
+      stk.push(203);  
+      stk.push(988);  
+
+      Iterator iterator = stk.iterator();  
+      while(iterator.hasNext())  
+      {  
+          Object values = iterator.next();  
+          System.out.println(values);   
+      }
+```
+
+
+
+
 
 
 
