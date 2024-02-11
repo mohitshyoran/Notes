@@ -124,7 +124,33 @@ list.remove(0);
   }
 ```
 
-## 5. TreeSet
+## 5. LinkedHashSet
+- Same Like Hashset, it maintains insertion order.
+
+
+## 6. TreeSet
+- Contains unique element, does not allow null.
+- Maintains order.
+- User BST for implementation, search, insert - O(logn)
+
+***Constructors***
+- TreeSet(), TreeSet(Collection<? extends E> c), TreeSet(SortedSet<E> s), TreeSet(Comparator<? super E> comparator)
+ 
+***Common Used Methods***
+- add(E e), addAll(Collection<? extends E> c), ceiling(E e), floor(E e), first(), last(), size(), contains(), clear(), remove(E e), pollFirst(), pollLast().
+
+
+## 7. Priority Queue
+- 
+
+***Constructors***
+- 
+ 
+***Common Used Methods***
+-
+  
+
+
 
 
 
