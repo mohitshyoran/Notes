@@ -75,7 +75,7 @@ list.remove(0);
 - push(E item), pop(), peek(), empty(), size()
 
 ```java
-  Iterate by forEach
+  //Iterate by forEach
   public static void main(String args[]) {
     Stack <Integer> stk = new Stack<>();  
  
@@ -88,19 +88,19 @@ list.remove(0);
     );  
     }
 
-  Iterate by Iterator
-      Stack <Integer> stk = new Stack<>();  
-   
-      stk.push(119);  
-      stk.push(203);  
-      stk.push(988);  
+  //Iterate by Iterator
+    Stack <Integer> stk = new Stack<>();  
+ 
+    stk.push(119);  
+    stk.push(203);  
+    stk.push(988);  
 
-      Iterator iterator = stk.iterator();  
-      while(iterator.hasNext())  
-      {  
-          Object values = iterator.next();  
-          System.out.println(values);   
-      }
+    Iterator iterator = stk.iterator();  
+    while(iterator.hasNext())  
+    {  
+        Object values = iterator.next();  
+        System.out.println(values);   
+    }
 ```
 
 ## 4 HashSet
