@@ -141,13 +141,64 @@ list.remove(0);
 
 
 ## 7. Priority Queue
-- 
-
-***Constructors***
-- 
  
 ***Common Used Methods***
--
+- offer(E e), poll(), peek(), size(), remove(E e)
+
+```java
+//min priority queue
+ Queue<String> queue=new PriorityQueue<String>();
+
+//max priority queue
+PriorityQueue<Integer> queue = new PriorityQueue<>(10, Collections.reverseOrder());
+
+//Implement PriorityQueue through Comparator
+```java
+PriorityQueue<Student> pq = new PriorityQueue<Student>(5, new StudentComparator());
+class StudentComparator implements Comparator<Student>{
+    public int compare(Student s1, Student s2) {
+        if (s1.cgpa < s2.cgpa)      return 1;
+        else if (s1.cgpa > s2.cgpa)     return -1;
+        return 0;
+    }
+}
+
+//Implement PriorityQueue through Comparable
+public class Student implements Comparable<Student> {
+    String name;
+    int age;
+
+    public Student(String name, int age) {  
+        this.name = name;
+        this.age = age;
+    }
+    public int compareTo(Student other) {
+        return Integer.compare(this.age, other.age);
+    }
+    @Override
+    public String toString(){
+        return this.name + " - " + this.age;
+    }
+
+    public static void main(String arg[]) {
+        PriorityQueue<Student> pq = new PriorityQueue<Student>();
+
+        pq.add(new Student("a", 24));
+        pq.add(new Student("b", 20));
+        pq.add(new Student("c", 28));
+
+        System.out.println(pq.poll()+" "+pq.poll()+" "+pq.poll());
+    }
+}
+```
+
+## 8. Array Dequeue
+ 
+***Common Used Methods***
+- offer(E e), poll(), peek(), size(), remove(E e)
+
+
+
   
 
 
