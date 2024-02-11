@@ -253,7 +253,7 @@ for(Map.Entry m : mp.entrySet()){
  LinkedHashMap<Integer,String> hm=new LinkedHashMap<Integer,String>();
 ```
 
-## 3. Treemap
+## 3. TreeMap
 
 
 
