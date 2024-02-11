@@ -17,13 +17,13 @@ ArrayList<Integer> al = new ArrayList<Integer>(); // works fine
 - boolean add(E e)
 - void clear()
 - E get(int index)
+- E set(int index, E element)
 - boolean isEmpty()
 - Iterator()
 - Object[] toArray()
 - boolean contains(Object o)
 - E remove(int index)
 - boolean remove(Object o)
-- E set(int index, E element)
 - int size()
 
 ```java
@@ -48,6 +48,27 @@ list.remove(0);
 ```
 
 ## 2. LinkedList
+- Java LinkedList class uses a doubly linked list to store the elements.
+- Java LinkedList class can be used as a list, stack or queue.
+
+```java
+  LinkedList<String> al=new LinkedList<String>();
+```
+
+***Common Used Methods***
+- boolean add(E e), void add(int index, E element), void addFirst(E e), void addLast(E e)
+- void clear()
+- E get(int index), E getFirst(), E getLast()
+- boolean offer(E e), boolean offerFirst(E e), boolean offerLast(E e)
+- E peek(), E peekFirst(), E peekLast()
+- E poll(), E pollFirst(), E pollLast()
+- E remove(), E remove(int index), boolean remove(Object o), E removeFirst(), E removeLast()
+- E set(int index, E element)
+
+## 3. 
+
+
+
 
 
 
