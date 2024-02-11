@@ -235,10 +235,19 @@ Deque<String> deque = new ArrayDeque<String>();
 HashMap<Integer,String> mp=new HashMap<>();
 mp.put(1,"Mango");
 mp.put(2,"Apple");    
-mp.put(3,"Banana");   
-   
+mp.put(3,"Banana");
+
+// Iterate using for-each loop for iteration over Map.entrySet()      
 for(Map.Entry m : mp.entrySet()){    
     System.out.println(m.getKey()+" "+m.getValue());    
+}
+
+// Iterate using iterators 
+Iterator<Map.Entry<Integer, String>> itr = mp.entrySet().iterator(); 
+  
+while(itr.hasNext()) { 
+    Map.Entry<Integer, String> entry = itr.next(); 
+    System.out.println(entry);
 }
 ```
 
@@ -254,6 +263,22 @@ for(Map.Entry m : mp.entrySet()){
 ```
 
 ## 3. TreeMap
+- Java TreeMap maintains ascending order.
+- It is a red-black tree based implementation.
+- Can not contain any null key.
+- Insert, search, update - O(logn).
+
+***Common Used Methods***
+- Other than what we have in HashMap.
+- firstKey(), lastKey(), pollFirstEntry(), pollLastEntry(),
+
+  ```java
+  TreeMap<Integer,String> map=new TreeMap<Integer,String>();
+  ```
+
+  
+
+  
 
 
 
