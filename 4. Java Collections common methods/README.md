@@ -208,6 +208,14 @@ Deque<String> deque = new ArrayDeque<String>();
 - remove(), removeFirst(), removeLast()
 
 
+# Java Map Hierarchy
+- Map in Java is an interface available in java.util package and it stores the data in key and value pairs.
+- It does not allow duplicate keys.
+- ***It is not subtype of the Collections interface.***
+
+![](images/image02.png)
+
+
 
   
 
