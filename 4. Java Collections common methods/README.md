@@ -12,19 +12,17 @@ ArrayList<int> al = ArrayList<int>(); // does not work
 ArrayList<Integer> al = new ArrayList<Integer>(); // works fine
 ```
 
+***Constructors***
+- ArrayList(), ArrayList(Collection<? extends E> c), ArrayList(int capacity)
+
 ***Common Used Methods***
-- void add(int index, E element)
-- boolean add(E e)
-- void clear()
-- E get(int index)
-- E set(int index, E element)
-- boolean isEmpty()
-- Iterator()
-- Object[] toArray()
+- void add(int index, E element), boolean add(E e)
+- E get(int index), E set(int index, E element)
+- E remove(int index), boolean remove(Object o)
+- int size(), void clear(), boolean isEmpty()
 - boolean contains(Object o)
-- E remove(int index)
-- boolean remove(Object o)
-- int size()
+- Object[] toArray()
+- Iterator()
 
 ```java
 Example
@@ -55,6 +53,9 @@ list.remove(0);
   LinkedList<String> al=new LinkedList<String>();
 ```
 
+***Constructors***
+- LinkedList(), LinkedList(Collection<? extends E> c)
+
 ***Common Used Methods***
 - boolean add(E e), void add(int index, E element), void addFirst(E e), void addLast(E e)
 - void clear()
@@ -66,18 +67,14 @@ list.remove(0);
 - E set(int index, E element)
 
 ## 3. Stack
-```java
-Stack<type> stk = new Stack<>();
-```
 
+***Constructors***
+- Stack()
+  
 ***Common Used Methods***
-- push(E item)
-- pop()
-- peek()
-- empty()
-- size()
+- push(E item), pop(), peek(), empty(), size()
 
-  ```java
+```java
   Iterate by forEach
   public static void main(String args[]) {
     Stack <Integer> stk = new Stack<>();  
@@ -105,6 +102,31 @@ Stack<type> stk = new Stack<>();
           System.out.println(values);   
       }
 ```
+
+## 4 HashSet
+- Store element by using hashing.
+- Contains unique value, allows null.
+- Initial capacity - 15, Load Factor - 0.75.
+      
+***Constructors***
+- HashSet(), HashSet(int capacity), HashSet(int capacity, float loadFactor), HashSet(Collection<? extends E> c).
+
+***Common Used Methods***
+- add(E e), clear(), contains(Object o), isEmpty(), remove(Object o), size().
+
+```java
+  List<String> list = new ArrayList<>(Arrays.asList("One", "Two", "Three", "Four"));
+  Set<String> st = new HashSet(list);  
+      
+  Iterator<String> it = st.iterator();  
+  while(it.hasNext()){  
+      System.out.println(it.next());  
+  }
+```
+
+## 5. TreeSet
+
+
 
 
 
