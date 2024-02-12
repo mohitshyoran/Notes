@@ -17,10 +17,10 @@ Yes
 - Class - can't extend it.
 
 ### Can garbage collector can be called explicitly in Java?
-Yes
+- Yes
 
 ### What is finalize() method in java?
-It is called always just before garbage collector destroys object(clean up).
+- It is called always just before garbage collector destroys object(clean up).
 
 ### Stream vs collections?
 - In Collection in memory data structure - every element computed before adding to collection, Stream is fixed data structure - computes on demand.
