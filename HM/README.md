@@ -42,6 +42,7 @@
 - and learned to raise a flag instead of keep trying.
 
 ### Tell me about a time when you invented something? or Time when you came up with novel solution?
+- Created common SQL queries to find required data on lower environments (for defect fix and dev, creating new data takes lot of time), maintained it on confluence and shared with team mates.
 - Not a invention but created one doc of common defects.
 
 ### Tell me about a time you committed a mistake? or Have you ever failed at something? What did you learn from it?
