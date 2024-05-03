@@ -73,3 +73,73 @@ And i have also came to know that in your company also has 60 days notice period
 ### What is day to day work, resposibilities, team & culture?
 
 ### How is your Experience at Google?
+
+# Googlyness and leadership
+### Have you ever faced any challenges/conflicts with colleagues?
+- Not such as conflict but we have discussions regarding delivery timelines, estimations, implementation, design of solution.
+we have different point of view, different approach, we discuss pro and cons of approach. and if we dont reach to a point we take help of manager.
+
+### Challenge with manager when you had to disagree with your manager and manager agreed with your point?
+- Regarding choosing database for one feature, my manager and team lead were suggesting to use mySQl but I noticed few performance issues and suggested them to use couchbase no sql database. They did not agree at first place but later I discussed about it to architect and he approved my suggestion.
+
+### Challenge with manager when you had to agree with manager even though he was wrong.
+- Resoiurce allocation to production tickets.
+
+### Situation when you had to agree with your junior.
+- Here was a situation where a junior team member proposed a creative solution to a technical challenge. Despite being more experienced, I recognized the value of their idea and the opportunity to foster a collaborative team culture. I actively supported and encouraged their initiative.
+
+### Describe the project that you had the most trouble with. What would you have done differently?
+- Business rule service - very critical and estimation was very less. Could have kept meeting with service owner to understand about service. and to review time needed from him.
+
+### Share an example of how you were able to motivate employees or co-workers.
+- New joinee was not having confidence, I helped him. He was expecting to be perfect and so much from himself.
+
+### How do you stay organized?
+- Plan my day, review end of the day so can identitfy mistakes. write down goals for the day.
+
+### What websites do you spend a lot of time on?
+- Instagram, Leetcode
+
+### Talk about a time when you failed.
+- Few times by meeting deadline.
+
+### Tell me about a time when your suggestions brought positive changes/impact to the team.
+- By giving responsibility of maintaining env to newly joined.
+
+### How do you spent free time outside work?
+- Cricket, running, talking to friends on call.
+
+### Which is your fav google product. what you like and dont like about it?
+- Google map - location sharing & estimated time of arrival, limited offline functionality.
+- Google pay - More Coupans, Stuck in processing more times.
+
+### Choose any app from mobile what you like about it and what you dont like about it?
+- Instagram, whatsapp
+
+### How do you know a feature you have built is working ?
+- Functional Testing, User Acceptance Testing (UAT), Automated Testing, Performance Testing
+
+### What was the biggest takeaway from your current job that you'll carry with you throughout your career?​
+- Take initiative, be bold, and have ambition, self decepline to meet deadlines.
+
+### Where do you see yourself in next 5/10 years?
+- Envision myself in a leadership role within the company, leveraging my skills and experience to drive innovation, mentor and develop teams, and contribute to strategic initiatives that align with the organization's growth and success.
+
+### What do you do if you disagree with your boss?
+- Address the disagreement respectfully, present your viewpoint with evidence, listen to your boss's perspective, seek compromise, and accept the final decision professionally.
+
+### What do you do if you don't know the solution for a certain problem and nobody can help at the moment?
+- Research and Self-Study, Reach Out to Experts, Experiment and Test, Escalate if Necessary.
+
+### Recent improvements which helped your in professional and personal life.
+- Time Management, Continuous Learning, Health and Wellness, Effective Communication.
+
+### What is your biggest strength and weakness?
+- Adaptability and quick grasp of new technologies or concepts.
+- I can improve my time management skills, particularly in prioritizing tasks and allocating resources efficiently.
+  
+### Give an example of how you set your goals and achieve them​.
+- Write down your goals
+- Be specific what is imp what is not.
+- Pick an exact due date.
+- Review progress everyday.
