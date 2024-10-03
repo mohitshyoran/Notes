@@ -110,7 +110,7 @@ we have different point of view, different approach, we discuss pro and cons of 
 - Cricket, running, talking to friends on call.
 
 ### Which is your fav google product. what you like and dont like about it?
-- Google map - location sharing & estimated time of arrival, limited offline functionality.
+- Google map - location sharing & estimated time of arrival, Shortcut in mountains.
 - Google pay - More Coupans, Stuck in processing more times.
 
 ### Choose any app from mobile what you like about it and what you dont like about it?
