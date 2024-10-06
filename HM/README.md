@@ -14,14 +14,25 @@
 
 ### What did you learn while working at Amdocs?
 ***Techincal***
+- Learned overall process of software development lifecycle.
 - Write clean code - readable, use of proper design pattern, naming convention, Convention of code, methods for dedicated tasks so change is easy later.
 - writing code dont take much time, uderstanding the business logic takes, So pay more attention in understading business flow clearly.
-- Learned overall process of software development lifecycle.
 
 ***Non Technical***
-- Limitation of taking help and helping other as well.
+- Take help but value their time, seek help after your own research.
 - Healthy relations and connections with team mates, since spending half of the time with them so it's good to have good connections.
-- Learned to focus on one thing when multiple things are there.
+
+### What you have done beyond responsibilities?
+- Encourage Juniors.( One was feeling low and was not having confidence, was expecting too much from himself. Motivated and improved his performance).
+- Good in DSA and problem sovling, helped my teammates many times in algoriths.
+
+### Contributions in team aprt from your work?
+- Suggested to improve review process.
+- Improve validation process by 20%(caching, redundant network calls, unnecessary for loops).
+
+### Tell me about a time when you invented something? or Time when you came up with novel solution?
+- Created common SQL queries to find required data on lower environments (for defect fix and dev, creating new data takes lot of time), maintained it on confluence and shared with team mates.
+- Not a invention but created one doc of common defects.
 
 ### What are your biggest achievements? 
 - Onsite in just 1.5 year.
@@ -30,20 +41,17 @@
 ### Tell me about a time when you helped one of your teammates?
 - Business flows.
 - New joinee help in work and motivated mentally , improved her performance.
+- Problem solving.
 
 ### Weakness overcame in last on year?
-- Distraction because of multiple tasks -> learn to focus at one task at a time.
-- Wasted lot of time when stuck -> work - break - work.
+- Implemented work-break-work strategy. Very helpful when stuck.
 - Not being quite and taking responsibilities.
 
 ### Situation where it did not go as expected and then how you handled it and learning?
 - Business rule feature, complex code critical impacts.
 - Handled by working extra.
-- and learned to raise a flag instead of keep trying.
+- And learned to raise a flag instead of keep trying.
 
-### Tell me about a time when you invented something? or Time when you came up with novel solution?
-- Created common SQL queries to find required data on lower environments (for defect fix and dev, creating new data takes lot of time), maintained it on confluence and shared with team mates.
-- Not a invention but created one doc of common defects.
 
 ### Tell me about a time you committed a mistake? or Have you ever failed at something? What did you learn from it?
 - By doing wrong analysis and wrong understanding of the US.
@@ -69,10 +77,13 @@ And i have also came to know that in your company also has 60 days notice period
 
 
 # Questions to ask to interviewer at the end of the interview.
-
-### What is day to day work, resposibilities, team & culture?
-
-### How is your Experience at Google?
+* What tech stack we are using?
+* What would be expectation for a L4 level role in initial couple of months?
+* How you plan to ramp up new comers, since knowing business and system is important.
+* How does mentorship work in the team, and are there senior engineers who actively support and guide junior team members?
+* How much big is team size?
+* What is day to day work, resposibilities, team & culture?
+* How is your Experience at this company?
 
 # Googlyness and leadership
 ### Have you ever faced any challenges/conflicts with colleagues?
@@ -83,7 +94,7 @@ we have different point of view, different approach, we discuss pro and cons of 
 - Regarding choosing database for one feature, my manager and team lead were suggesting to use mySQl but I noticed few performance issues and suggested them to use couchbase no sql database. They did not agree at first place but later I discussed about it to architect and he approved my suggestion.
 
 ### Challenge with manager when you had to agree with manager even though he was wrong.
-- Resoiurce allocation to production tickets.
+- Resource allocation to production tickets.
 
 ### Situation when you had to agree with your junior.
 - Here was a situation where a junior team member proposed a creative solution to a technical challenge. Despite being more experienced, I recognized the value of their idea and the opportunity to foster a collaborative team culture. I actively supported and encouraged their initiative.
@@ -113,9 +124,6 @@ we have different point of view, different approach, we discuss pro and cons of 
 - Google map - location sharing & estimated time of arrival, Shortcut in mountains.
 - Google pay - More Coupans, Stuck in processing more times.
 
-### Choose any app from mobile what you like about it and what you dont like about it?
-- Instagram, whatsapp
-
 ### How do you know a feature you have built is working ?
 - Functional Testing, User Acceptance Testing (UAT), Automated Testing, Performance Testing
 
@@ -143,3 +151,8 @@ we have different point of view, different approach, we discuss pro and cons of 
 - Be specific what is imp what is not.
 - Pick an exact due date.
 - Review progress everyday.
+
+### What do you like or admire from you leader?
+* Leadership skills
+* Make you feel special, not only a part of team.
+* Always backing up ,listening and boosting confidence.
